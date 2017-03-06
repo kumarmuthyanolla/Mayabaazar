@@ -24,7 +24,7 @@ namespace Mayabazaar
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-cyrog.css",
                       "~/Content/site.css"));
         }
     }
