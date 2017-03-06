@@ -1,9 +1,30 @@
-﻿@model Mayabazaar.Models.Customer
+﻿@model List<Mayabazaar.Models.Customer>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h4>Index</h4>
+
+@if (@Model.Count > 0)
+{
+    <ul>
+        @{ int i = 0;}
+        @foreach (var customer in Model)
+        {
+        <a href="~/Customer/Details/@i"><li>@customer.Name</li></a>
+        i++;
+
+        }
+    </ul>
+}
+else
+{
+    <b>No Customers</b>
+}
+
+
+
+
 
